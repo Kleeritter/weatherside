@@ -1,0 +1,229 @@
+body {
+    background-color: #eceff4;
+    font-family: 'Quicksand';font-size: 22px;
+    }
+    canvas {
+      background: #eceff4;
+      border-radius: 0px;
+      width: 30%;
+
+  }
+  .container {  display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Temperaturgraf MaxT MinT MittelT"
+      "Luftdruckgraf MaxP MinP MittelP"
+      "Niederschlaggraf MaxSonne GesammtNieder Witterungsverhalten";
+
+  }
+  .chartBox{
+    width: 50vw;
+    height: calc(50vh/1.618);
+    align-items: center;
+    margin: auto;
+    position: absolute;
+  }
+  .Temperaturgraf { grid-area: Temperaturgraf; }
+  
+  .Luftdruckgraf { grid-area: Luftdruckgraf; }
+  
+  .Niederschlaggraf { grid-area: Niederschlaggraf; }
+  
+  .MaxT { grid-area: MaxT; 
+    justify-self: center;
+    align-self: center; }
+  
+  .MinT { grid-area: MinT; 
+    justify-self: center;
+    align-self: center;
+    
+  }
+  
+  .MaxP { grid-area: MaxP; 
+    justify-self: center;
+    align-self: center;}
+  
+  .MinP { grid-area: MinP;
+    justify-self: center;
+    align-self: center; }
+  
+  .MaxSonne { grid-area: MaxSonne;
+    justify-self: center;
+    align-self: center; }
+  
+  .GesammtNieder { grid-area: GesammtNieder;
+    justify-self: center;
+    align-self: center; }
+  
+  .MittelT { grid-area: MittelT;
+    text-align:center; 
+    justify-self: center;
+    align-self: center;}
+  
+  .MittelP { grid-area: MittelP; 
+    justify-self: center;
+    align-self: center;}
+  
+  .Witterungsverhalten { grid-area: Witterungsverhalten;
+    justify-self: center;
+    align-self: center;
+     height: 360px;
+    width: 360px;
+    float: left;
+  }
+  
+  .Werte{
+    justify-content: center;}
+  img {
+      border-radius: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+    h1 {
+    color: #2e3440;
+    text-align:center;
+  }
+  h2 {
+    color: #3b4252;
+    text-align:center;
+  }
+  h3 {
+    color: #3b4252;
+    text-align:center;
+  }
+  p {
+    color: #2e3440;
+    text-align:center;
+  }
+  .Count {
+    color: #3b4252;
+    text-align:center;
+    font-size: 40px;
+  }
+  form {
+    color: #3b4252;
+    text-align:center;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #d8dee9;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+    border-radius: 25px;
+  }
+  
+  li a {
+    display: block;
+    color: #2e3440;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 25px;
+  }
+  
+  li a:hover {
+    background-color: #81a1c1;
+    border-radius: 25px;
+  }
+  
+  .active {
+    background-color: #5e81ac;
+    border-radius: 25px;
+  }
+  .pie-chart-container,
+.doughnut-chart-container {
+  height: 360px;
+  width: 360px;
+  float: left;
+}
+.alla {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "MaxTf MinTf MittelTf"
+    "MaxPf MinPf MittelPf";
+}
+
+.MaxTf { grid-area: MaxTf; }
+
+.MinTf { grid-area: MinTf; }
+
+.MittelTf { grid-area: MittelTf; }
+
+.MittelPf { grid-area: MittelPf; }
+
+.MinPf { grid-area: MinPf; }
+
+.MaxPf { grid-area: MaxPf; }
+.chart-container {
+  height: 250px;
+  width: 300px;
+}    
+.info-pane {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 400;
+  padding: 1em;
+}
+.alles{
+  height: 1000px;
+  border-radius: 25px;
+  position: relative;
+  width:auto;
+}
+#map { height: 1000px;  border-radius: 25px;}
+.leaflet-tile {
+  border-radius: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+}
+#marker{color:rgba(229, 233, 240, 1);}
+
+.aufklapper { 
+  height: 700px;
+  position: absolute; 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.0fr 1.0fr 1fr;
+  gap: 20px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tauf"
+    "pauf"
+    "hauf";
+  width: 35%;
+  background:   #eceff4;
+  border-radius: 25px;
+  display: none;
+  z-index: 400;
+  top: 100px;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+}
+
+.tauf { grid-area: tauf;       height: 200px; }
+
+.pauf { grid-area: pauf;       height: 200px;}
+
+.hauf { grid-area: hauf;       height: 200px;}
+
